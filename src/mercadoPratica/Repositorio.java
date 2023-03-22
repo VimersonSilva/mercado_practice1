@@ -18,4 +18,13 @@ public class Repositorio {
 	public void addLote(String nome, Lote lote) {
 		this.lotes.put(nome, lote);
 	}
+	public Produto obterProduto(Integer id) {
+		return this.produtos.get(id);
+	}
+	public String consultaProduto(Integer id) {
+		if(produtos.containsKey(id)) {
+			return produtos.get(id).getProduto();
+		}
+		return "Produto não encontrado.";
+	}
 }

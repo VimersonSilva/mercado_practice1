@@ -14,10 +14,14 @@ public class Service {
 		this.repo.addProd(id, prod);
 	}
 	
-	public void criaLote(String nome, Date data, int quant) {
-		Produto prod = new Produto(nome, , preco);
-		int id = prod.hashCode();
-		this.repo.addProd(id, prod);
+	public void criaLote(String nome, int quant, String data, Integer idProd) {
+		Produto prod = repo.obterProduto(idProd);
+		Lote lote = new Lote(prod, quant, data);
+		this.repo.addLote(nome, lote);
+	}
+	
+	public String consultaProduto(int idProduto) {
+		return this.repo.consultaProduto(idProduto);
 	}
 	
 }

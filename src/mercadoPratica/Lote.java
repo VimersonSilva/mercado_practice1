@@ -7,9 +7,9 @@ import java.util.Objects;
 public class Lote {
 	private Produto prod;
 	private int quant;
-	private Date validade;
+	private String validade;
 	
-	Lote(Produto prod, int quantidade, Date validade){
+	Lote(Produto prod, int quantidade, String validade){
 		this.prod = prod;
 		this.validade = validade;
 		this.quant = quantidade;

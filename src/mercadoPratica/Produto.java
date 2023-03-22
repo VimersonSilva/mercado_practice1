@@ -18,7 +18,11 @@ public class Produto {
 	public int hashCode() {
 		return Objects.hash(nome);
 	}
-
+	
+	public String getProduto() {
+		return "produto: " + nome + "/nfabricante: " + fabricante + "/npreco do produto: " + preco; 
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
